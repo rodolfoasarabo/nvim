@@ -26,4 +26,6 @@ require('lazy').setup {
   require 'plugins.indent-blankline',
   require 'plugins.misc',
   require 'plugins.barbecue',
+  require 'plugins.tmux',
+  require 'plugins.lazygit',
 }
