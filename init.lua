@@ -28,4 +28,6 @@ require('lazy').setup {
   require 'plugins.barbecue',
   require 'plugins.tmux',
   require 'plugins.lazygit',
+  require 'plugins.trouble',
+  require 'plugins.avante',
 }

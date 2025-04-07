@@ -36,4 +36,15 @@ return {
       require('colorizer').setup()
     end,
   },
+  {
+    'dimaportenko/telescope-simulators.nvim',
+    config = function()
+      require('simulators').setup()
+    end,
+    options = {
+      android_emulator = true,
+      apple_simulator = true,
+    },
+  },
+  { 'nvim-neotest/nvim-nio' },
 }
