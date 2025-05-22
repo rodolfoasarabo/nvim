@@ -29,5 +29,7 @@ require('lazy').setup {
   require 'plugins.tmux',
   require 'plugins.lazygit',
   require 'plugins.trouble',
-  require 'plugins.avante',
+  require 'plugins.flutter',
+  require 'plugins.debug',
+  -- require 'plugins.avante',
 }

@@ -1,5 +1,17 @@
 return {
   {
+    -- Visual debug for nvim-dap
+    'rcarriga/nvim-dap-ui',
+    dependencies = { 'mfussenegger/nvim-dap', 'nvim-neotest/nvim-nio' },
+    config = function()
+      require('dapui').setup()
+    end,
+  },
+  {
+    'neoclide/coc.nvim',
+    branch = 'release',
+  },
+  {
     -- Detect tabstop and shiftwidth automatically
     'tpope/vim-sleuth',
   },

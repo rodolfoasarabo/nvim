@@ -85,6 +85,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
+    pcall(require('telescope').load_extension, 'flutter')
 
     -- See `:help telescope.builtin`
     local builtin = require 'telescope.builtin'
@@ -98,6 +99,10 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
     vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+
+    -- Flutter tools
+    vim.keymap.set('n', '<leader>ft', require('telescope').extensions.flutter.commands, { desc = '[F]lutter [T]ools' })
+    vim.keymap.set('n', '<leader>ff', require('telescope').extensions.flutter.fvm, { desc = '[F]lutter [F]vm' })
 
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set('n', '<leader>/', function()
