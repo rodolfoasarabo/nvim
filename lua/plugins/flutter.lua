@@ -22,7 +22,7 @@ return {
       },
     },
     debugger = { -- integrate with nvim dap + install dart code debugger
-      enabled = false,
+      enabled = true,
       -- if empty dap will not stop on any exceptions, otherwise it will stop on those specified
       -- see |:help dap.set_exception_breakpoints()| for more info
       exception_breakpoints = {},

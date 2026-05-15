@@ -177,6 +177,7 @@ return {
       -- ts_ls = {},
       -- jsonls = {},
       -- yamlls = {},
+      -- pyright = {},
       lua_ls = {
         -- cmd = { ... },
         -- filetypes = { ... },
@@ -217,6 +218,8 @@ return {
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
+      'black',
+      'isort',
     })
 
     require('lspconfig').dartls.setup {
